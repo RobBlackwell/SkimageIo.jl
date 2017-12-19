@@ -1,5 +1,12 @@
 module SkimageIo
 
-# package code goes here
+export imsave, imread
+
+using PyCall
+
+@pyimport skimage.io as skimageio
+
+imsave = skimageio.imsave
+imread = skimageio.imread
 
 end # module
